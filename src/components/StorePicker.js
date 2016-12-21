@@ -6,8 +6,9 @@ class StorePicker extends React.Component {
       event.preventDefault();
       //First grab the text from the box,
       //Second we're going to transition from / to /store/:storeId
-      console.log(this.storeInput.value);
+      const storeId = this.storeInput.value;
 
+      this.context.router.transitionTo(`/store/${storeId}`);
     }
     render(){
       //Render methods are naturally bound to parent component. All other methods are not.
@@ -23,4 +24,7 @@ class StorePicker extends React.Component {
     }    
 } 
 
+StorePicker.contextTypes = {
+   router: React.PropTypes.object
+}
 export default StorePicker;
