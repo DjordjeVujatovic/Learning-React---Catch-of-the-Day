@@ -1,9 +1,7 @@
 import React from 'react';
 
-
+//Header is a static component that only renders out HTML, therefore can be a stateless functional component.
 const Header = (props) => {
-
-
 
       return(
         <header className="top">
@@ -19,6 +17,5 @@ const Header = (props) => {
         </header>
       )
 }   
-
 
 export default Header;
