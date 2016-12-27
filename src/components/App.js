@@ -12,6 +12,7 @@ class App extends React.Component {
 
     this.addFish = this.addFish.bind(this);
     this.loadSamples=this.loadSamples.bind(this);
+    this.addToOrder = this.addToOrder.bind(this);
     //Getting initial state
     this.state= {
       fishes: {},
@@ -34,6 +35,15 @@ class App extends React.Component {
       fishes: sampleFishes
     });
   }
+
+addToOrder(key) {
+//Take a copy of our state 
+const order = {...this.state.order};
+//Update or add new number of fish ordered.
+order[key] = order[key] + 1 || 1;
+//Update our state
+this.setState({order});
+}
     render(){
       return(
         <div className="catch-of-the-day">
