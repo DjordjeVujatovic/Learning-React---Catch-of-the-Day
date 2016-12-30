@@ -18,4 +18,7 @@ const Header = (props) => {
       )
 }   
 
+header.propTypes = {
+  tagline: React.PropTypes.string.isRequired
+}
 export default Header;

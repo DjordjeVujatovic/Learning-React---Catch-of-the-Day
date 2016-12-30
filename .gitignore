@@ -25,4 +25,4 @@ DerivedData
 #
 node_modules/
 npm-debug.log
-security-rules.json
+#security-rules.json
